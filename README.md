@@ -8,5 +8,5 @@ Every day one leet code problem.
 * day-15 18-11-23 - exploring the more carefree life
 * day-16 19-11-23 - 3sum felt little hard so took time
 * day-18 21-11-23 - worked on getting one important document
-* day-19 22-11-23 - sick
 * day-20 23-11-23 - sick
+* day-21 24-11-23 to 31 04-12-23 - life is not going good. struggling , sick , interviews etc..,
