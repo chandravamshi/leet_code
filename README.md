@@ -9,4 +9,4 @@ Every day one leet code problem.
 * day-16 19-11-23 - 3sum felt little hard so took time
 * day-18 21-11-23 - worked on getting one important document
 * day-20 23-11-23 - sick
-* day-21 24-11-23 to 42 15-12-23 - life is not going good. struggling , sick , interviews etc..,
+* day-21 24-11-23 to 41 14-12-23 - life is not going good. struggling , sick , interviews etc..,
