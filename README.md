@@ -17,4 +17,4 @@ Every day one leet code problem.
 * day-21 24-11-23 to 41 14-12-23 - life is not going good. struggling , sick , interviews etc..,
 * day-44 17-12-23 to 46 19-12-23 - work and sick excuses anyway
 * day-49 22-12-23 to 54 27-12-23 - vacation
-* day-56 29-12-23 to 57 31-12-23 - vacation
+* day-56 29-12-23 to 57 30-12-23 - vacation
