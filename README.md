@@ -1,5 +1,5 @@
 # leet_code
-Every day one leet code problem.
+I will try every day to solve one leet code problem.
 
 ### Concepts I learned by solving
 * array
