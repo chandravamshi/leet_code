@@ -5,6 +5,7 @@ Every day one leet code problem.
 * array
 * two pointers
 * sliding window
+* stack
 
 ### skipped days (reasons are for loosers)
 * day-7 10-11-23 - got up with getting some important documents
@@ -18,3 +19,4 @@ Every day one leet code problem.
 * day-44 17-12-23 to 46 19-12-23 - work and sick excuses anyway
 * day-49 22-12-23 to 54 27-12-23 - vacation
 * day-56 29-12-23 to 57 30-12-23 - vacation
+* will not update this anymore (i mean reasons.)
