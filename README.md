@@ -87,6 +87,53 @@ I will try every day to solve one leet code problem.
 2. Time and Space Complexity:
     - The time complexity for most stack operations (push, pop, peek) is O(1).
     - The space complexity for a stack depends on the number of elements stored, so it's O(n), where n is the number of elements in the stack.
+  
+   
+   - **Time Complexity of Stack Operations:**
+    
+        1. **Push Operation**:
+           - Time Complexity: O(1)
+           - Explanation: Adding an element to the top of the stack takes constant time, regardless of the size of the stack. This is because stacks are typically implemented using arrays or linked lists, where appending an element to the end (or top) has a constant time complexity.
+           - Example:
+             ```python
+             stack = []
+             stack.append(1)  # Push operation
+             ```
+        
+        2. **Pop Operation**:
+           - Time Complexity: O(1)
+           - Explanation: Removing the top element from the stack also takes constant time. Whether using arrays or linked lists, removing the last element (or top element) can be done in constant time.
+           - Example:
+             ```python
+             stack = [1, 2, 3]
+             popped_element = stack.pop()  # Pop operation
+             ```
+    
+        3. **Peek (or Top) Operation**:
+           - Time Complexity: O(1)
+           - Explanation: Viewing the top element of the stack without removing it is also a constant-time operation. It involves accessing the last element of the array or linked list, which can be done in constant time.
+           - Example:
+             ```python
+             stack = [1, 2, 3]
+             top_element = stack[-1]  # Peek operation
+             ```
+    
+   - **Space Complexity of Stacks:**
+    
+        - Space Complexity: O(n)
+        - Explanation: The space complexity of a stack depends on the number of elements stored in the stack. Whether using arrays or linked lists, the space required to store 'n' elements grows linearly with the number of elements in the stack.
+        - Example:
+          ```python
+          stack = []
+          for i in range(1, n+1):
+              stack.append(i)  # Pushing 'n' elements onto the stack
+          ```
+    
+    **Summary:**
+    
+    - Stack operations such as push, pop, and peek have a time complexity of O(1) because they operate on the topmost element of the stack, which can be accessed in constant time.
+    - The space complexity of a stack is O(n) because it grows linearly with the number of elements stored in the stack. Each element in the stack consumes a constant amount of space, resulting in a linear space complexity.
+    - These time and space complexities make stacks efficient for implementing various algorithms and data structures, such as expression evaluation, backtracking, and function call stacks.
 
 **Advanced Level:**
 
