@@ -306,9 +306,6 @@ class Solution:
         return res
 ```
 
----
-
-This README file provides a clear explanation of the problem, its solution approach, step-by-step explanation of the solution, time and space complexity analysis, and the code implementation. It should help users understand the problem and the provided solution effectively.
 
 ----
 
