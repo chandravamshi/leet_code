@@ -241,7 +241,8 @@ Here's how you can structure the README file for the "Daily Temperatures" proble
 
 ---
 
-#### Daily Temperatures https://leetcode.com/problems/daily-temperatures/description/
+#### Daily Temperatures 
+https://leetcode.com/problems/daily-temperatures/description/
 
 Given an array of integers `temperatures` representing the daily temperatures, return an array `answer` such that `answer[i]` is the number of days you have to wait after the `i`th day to get a warmer temperature. If there is no future day for which this is possible, keep `answer[i] == 0` instead.
 
