@@ -6,7 +6,7 @@ I will try every day to solve one leet code problem.
 * two pointers
 * sliding window
 * [Stacks](#stacks)
- * [Daily Ttemperatures](#daily-temperatures)
+    * [Daily Ttemperatures](#daily-temperatures)
 
 ---
 
