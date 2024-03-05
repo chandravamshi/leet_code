@@ -235,6 +235,79 @@ I will try every day to solve one leet code problem.
 Stacks are fundamental data structures with a wide range of applications in computer science. Mastering the concepts and operations of stacks is crucial for understanding more complex data structures and algorithms. As you delve deeper into programming and computer science, you'll encounter stacks in various contexts, making them an essential tool in your toolkit.
 
 
+---
+
+Here's how you can structure the README file for the "Daily Temperatures" problem:
+
+---
+
+#### Daily Temperatures https://leetcode.com/problems/daily-temperatures/description/
+
+Given an array of integers `temperatures` representing the daily temperatures, return an array `answer` such that `answer[i]` is the number of days you have to wait after the `i`th day to get a warmer temperature. If there is no future day for which this is possible, keep `answer[i] == 0` instead.
+
+Examples:
+
+Example 1:
+```
+Input: temperatures = [73,74,75,71,69,72,76,73]
+Output: [1,1,4,2,1,1,0,0]
+```
+
+Example 2:
+```
+Input: temperatures = [30,40,50,60]
+Output: [1,1,1,0]
+```
+
+Example 3:
+```
+Input: temperatures = [30,60,90]
+Output: [1,1,0]
+```
+
+Solution
+
+We can solve this problem using a stack. The stack will store the indices of the temperatures. As we iterate through the temperatures, we'll keep track of the indices of temperatures where we haven't found a warmer day yet. Whenever we find a temperature higher than the one corresponding to the top index in the stack, we'll pop from the stack and update the answer for that index.
+
+Step-by-Step Explanation:
+
+1. Initialize an array `res` of length equal to the length of `temperatures` with all elements set to 0.
+2. Initialize an empty stack `stack`.
+3. Iterate through the `temperatures` list using `enumerate()` to track both the index and the temperature.
+4. For each temperature:
+   - While the stack is not empty and the temperature at the top index of the stack (i.e., `temperatures[stack[-1]]`) is less than the current temperature:
+     - Pop the index from the stack.
+     - Update the corresponding element in `res` by subtracting the current index from the popped index.
+   - Push the current index onto the stack.
+5. Return the `res` array.
+
+Time Complexity:
+
+- The time complexity of this algorithm is O(n), where n is the number of temperatures in the input list. This is because we iterate through the temperatures list only once.
+
+Space Complexity:
+
+- The space complexity of this algorithm is also O(n). This is because, in the worst case, the stack can hold all the indices of temperatures in the input list.
+
+Code Implementation
+
+```python
+class Solution:
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        res = [0]*len(temperatures)
+        stack = []
+        for i, t in enumerate(temperatures):
+            while stack and temperatures[stack[-1]] < t:
+                stackIndex = stack.pop()
+                res[stackIndex] = (i - stackIndex)
+            stack.append(i)
+        return res
+```
+
+---
+
+This README file provides a clear explanation of the problem, its solution approach, step-by-step explanation of the solution, time and space complexity analysis, and the code implementation. It should help users understand the problem and the provided solution effectively.
+
 ----
 
 
