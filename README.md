@@ -7,6 +7,7 @@ I will try every day to solve one leet code problem.
 * sliding window
 * [Stacks](#stacks)
     * [Daily Temperatures](#daily-temperatures)
+    * [Car Fleet](#car-fleet)
 
 ---
 
@@ -306,7 +307,77 @@ class Solution:
         return res
 ```
 
+---
 
+### Car Fleet Problem
+https://leetcode.com/problems/car-fleet/description/
+
+**Problem Statement:**
+There are `n` cars going to the same destination along a one-lane road. The destination is `target` miles away. You are given two integer arrays `position` and `speed`, both of length `n`, where `position[i]` is the position of the `ith` car and `speed[i]` is the speed of the `ith` car (in miles per hour). A car can never pass another car ahead of it, but it can catch up to it and drive bumper to bumper at the same speed. The faster car will slow down to match the slower car's speed. The distance between these two cars is ignored (i.e., they are assumed to have the same position). A car fleet is some non-empty set of cars driving at the same position and same speed. Note that a single car is also a car fleet. If a car catches up to a car fleet right at the destination point, it will still be considered as one car fleet. Return the number of car fleets that will arrive at the destination.
+
+**Example:**
+```
+Input: target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]
+Output: 3
+Explanation:
+The cars starting at 10 (speed 2) and 8 (speed 4) become a fleet, meeting each other at 12.
+The car starting at 0 does not catch up to any other car, so it is a fleet by itself.
+The cars starting at 5 (speed 1) and 3 (speed 3) become a fleet, meeting each other at 6. The fleet moves at speed 1 until it reaches target.
+Note that no other cars meet these fleets before the destination, so the answer is 3.
+```
+
+**Solution:**
+```python
+class Solution:
+    def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
+        fleets = []
+        pair = [(p, s) for p, s in zip(position, speed)]
+        pair.sort()
+        totalTime = [(target-p)/s for p, s in pair]
+        fleets.append(totalTime[-1])
+        for tt in reversed(totalTime):
+            if fleets and fleets[-1] < tt:
+                fleets.append(tt)
+        return len(fleets)
+```
+
+**Step-by-Step Explanation:**
+
+1. We define a class `Solution` with a method `carFleet` that takes three arguments: `target`, `position`, and `speed`.
+
+2. We create an empty list `fleets` to store the time taken for each car fleet to reach the destination.
+
+3. We create a list of tuples `pair`, where each tuple contains the position and speed of a car, by zipping `position` and `speed`.
+
+4. We sort the `pair` list based on the position of the cars.
+
+5. We calculate the total time taken for each car to reach the destination using the formula `(target - p) / s`, where `p` is the position of the car and `s` is the speed of the car. We store these total times in the list `totalTime`.
+
+6. We append the maximum total time to the `fleets` list, as it represents the time taken by the last car fleet to reach the destination.
+
+7. We iterate through the `totalTime` list in reverse order using the `reversed` function.
+
+8. For each total time `tt`, if the `fleets` list is not empty and the last element of the `fleets` list is less than `tt`, we append `tt` to the `fleets` list.
+
+9. Finally, we return the length of the `fleets` list, which represents the number of car fleets that will arrive at the destination.
+
+Let's analyze the time and space complexity of the given solution:
+
+**Time Complexity:**
+1. Creating the list of tuples `pair` by zipping `position` and `speed` takes O(n) time, where n is the number of cars.
+2. Sorting the `pair` list takes O(n log n) time due to the sorting operation.
+3. Calculating the total time for each car takes O(n) time since it involves a linear iteration over the `pair` list.
+4. Iterating through the `totalTime` list in reverse order also takes O(n) time.
+5. Overall, the time complexity of the solution is dominated by the sorting operation, which is O(n log n).
+
+**Space Complexity:**
+1. Creating the list of tuples `pair` and the list `totalTime` both require O(n) additional space since they store information for each car.
+2. The list `fleets` also requires O(n) additional space as it may store the total time for each car fleet.
+3. Therefore, the overall space complexity of the solution is O(n).
+
+In summary, the given solution has a time complexity of O(n log n) and a space complexity of O(n).
+
+    
 ----
 
 
