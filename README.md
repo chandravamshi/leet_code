@@ -309,7 +309,7 @@ class Solution:
 
 ---
 
-### Car Fleet Problem
+### Car Fleet
 https://leetcode.com/problems/car-fleet/description/
 
 **Problem Statement:**
