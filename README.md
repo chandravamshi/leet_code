@@ -1,6 +1,6 @@
 # leet_code
-I will try every day to solve one leet code problem.
-
+[Leetcode Profile](https://leetcode.com/u/dasyamchandravamshi/)
+<!--
 ### Concepts I learned by solving
 * array
 * two pointers
@@ -379,5 +379,7 @@ In summary, the given solution has a time complexity of O(n log n) and a space c
 
     
 ----
+
+-->
 
 
